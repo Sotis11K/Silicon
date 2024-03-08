@@ -1,0 +1,28 @@
+﻿@using WebApp.RazorPages.Pages.Components
+<header>
+    <div class="container">
+        <a href="home.html"><img src="images/silicon_logo1_light.svg" alt="Silicon logo"></a>
+
+        <div class="menu">
+            <nav>
+                <a href="#overview">Overview</a>
+                <a href="#features">Features</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+
+        <div class="btn-switch">
+            <label>Light</label>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <label>Dark</label>
+        </div>
+
+        <div class="account-buttons">
+            <partial name="~/Pages/Components/_Button.cshtml" model='new ButtonViewModel{ClassName = "btn-gray", Link = "#", Icon = "fa-solid fa-right-to-bracket", Text = "Sign In"}' />
+            <partial name="~/Pages/Components/_Button.cshtml" model='new ButtonViewModel{ClassName = "btn-theme", Link = "#", Icon = "fa-regular fa-user", Text = "Sign Up"}' />
+        </div>
+    </div>
+</header>

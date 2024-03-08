@@ -1,0 +1,46 @@
+﻿@page
+@model WebApp.RazorPages.Pages.IndexModel
+@{
+    ViewData["Title"] = "Overview";
+}
+
+
+<section id="showcase">
+    <img class="background-image" src="/images/background-image.svg">
+    <div class="container">
+        <div class="content">
+            <p id="showcase-title">Task Management Assistant You gonna Love</p>
+            <p>We offer you a new generation of task management system. Plan, manage & track all your tasks in one flexible tool</p>
+            <a class="btn-theme" href="#">Get started for free</a>
+            <h6>Largest companies use our tool to work efficiently</h6>
+            <div class="brands">
+                <img src="images/brands2.svg" alt="">
+                <img src="images/brands3.svg" alt="">
+                <img src="images/brands4.svg" alt="">
+                <img src="images/brands1.svg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="features">
+    <div class="container">
+        <h1>What Do You Get with Our Tool?</h1>
+        <p>Make sure all your tasks are organized so you can set the priorities and focus on important.</p>
+        <div class="tool-features">
+            @if (Model.Features != null)
+            {
+                foreach (var feature in Model.Features)
+                {
+                    <div id="@feature.IdName" class="box">
+                        <img  src="@feature.Icon">
+                        <h5>@feature.Title</h5>
+                        <p>@feature.Description</p>
+                    </div>
+                }
+            }
+            ;
+        </div>
+    </div>
+</section>
