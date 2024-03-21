@@ -3,3 +3,30 @@
 @{
     ViewData["Title"] = "Sign Up";
 }
+
+<section id="signup">
+    <div class="container">
+
+        <form method="post">
+            <h1>Create Account</h1>
+            <p>Already have an account?<a asp-page="/signin">Sign in here</a></p>
+
+            <div class="content">
+                <div class="input-group">
+                    <label asp-for="@Model.Form.FirstName"></label>
+                    <input asp-for="@Model.Form.FirstName" placeholder="Ella..">
+
+                    <label asp-for="@Model.Form.LastName"></label>
+                    <input asp-for="@Model.Form.LastName" placeholder="Kihlgren..">
+
+                    <label asp-for="@Model.Form.Email"></label>
+                    <input asp-for="@Model.Form.Email" placeholder="ellak@email.com...">
+                </div>
+            </div>
+
+            <button class="btn-theme-s">Sign up</button>
+
+        </form>
+
+    </div>
+</section>
