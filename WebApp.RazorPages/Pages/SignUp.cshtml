@@ -14,14 +14,34 @@
             <div class="content">
                 <div class="input-group">
                     <label asp-for="@Model.Form.FirstName"></label>
-                    <input asp-for="@Model.Form.FirstName" placeholder="Ella..">
-
-                    <label asp-for="@Model.Form.LastName"></label>
-                    <input asp-for="@Model.Form.LastName" placeholder="Kihlgren..">
-
-                    <label asp-for="@Model.Form.Email"></label>
-                    <input asp-for="@Model.Form.Email" placeholder="ellak@email.com...">
+                    <input asp-for="@Model.Form.FirstName" placeholder="Enter your first name">
                 </div>
+
+                <div class="input-group">
+                    <label asp-for="@Model.Form.LastName"></label>
+                    <input asp-for="@Model.Form.LastName" placeholder="Enter your last name">
+                </div>
+
+                <div class="input-group">
+                    <label asp-for="@Model.Form.Email"></label>
+                    <input asp-for="@Model.Form.Email" type="email" placeholder="Enter your email address">
+                </div>
+
+                <div class="input-group">
+                    <label asp-for="@Model.Form.Password"></label>
+                    <input asp-for="@Model.Form.Password" type="password" placeholder="********">
+                </div>
+
+                <div class="input-group">
+                    <label asp-for="@Model.Form.ConfirmPassword"></label>
+                    <input asp-for="@Model.Form.ConfirmPassword" type="password" placeholder="********">
+                </div>
+
+                <div class="checkbox-group">
+                    <input asp-for="@Model.Form.Terms">
+                    <label asp-for="@Model.Form.Terms"></label>
+                </div>
+
             </div>
 
             <button class="btn-theme-s">Sign up</button>

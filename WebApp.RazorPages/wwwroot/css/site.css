@@ -362,14 +362,29 @@ form {
 form .input-group {
   display: grid;
 }
-form .input-group label {
+form label {
   margin-bottom: 3px;
   font-weight: 700;
 }
-form .input-group input {
+form input {
   padding: 1rem;
   border-radius: 8px !important;
   border: 1px solid #565973;
+}
+form .checkbox-group {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+form .checkbox-group label {
+  margin: 0;
+  font-weight: 400;
+}
+form .checkbox-group input[type=checkbox] {
+  height: 1rem;
+  width: 1rem;
 }
 
 header {
@@ -552,4 +567,7 @@ footer .container .hide-social-media {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+#signup .container .btn-theme-s {
+  border: none;
 }

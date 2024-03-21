@@ -2,20 +2,38 @@ form {
     display: grid;
     gap: 1rem;
     width: 100%;
-    
+
     .input-group {
         display: grid;
+    }
 
+
+    label {
+        margin-bottom: 3px;
+        font-weight: 700;
+    }
+
+    input {
+        padding: 1rem;
+        border-radius: 8px !important;
+        border: 1px solid $gray-700;
+    }
+
+    .checkbox-group {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.6rem;
 
         label {
-            margin-bottom: 3px;
-            font-weight: 700;
+            margin: 0;
+            font-weight: 400;
         }
 
-        input {
-            padding: 1rem;
-            border-radius: 8px !important;
-            border: 1px solid $gray-700;
+        input[type="checkbox"] {
+            height: 1rem;
+            width: 1rem;
         }
     }
 }

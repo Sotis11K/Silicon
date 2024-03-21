@@ -28,7 +28,7 @@ public class SignUpFormModel
     public string ConfirmPassword { get; set; } = null;
 
 
-    [DisplayName("Term & Conditions")]
+    [DisplayName("I agree to the Terms & Conditions")]
     [Required(ErrorMessage = "You must agree to the terms & conditions")]
     public bool Terms { get; set; }
 }
