@@ -1,12 +1,18 @@
 form {
     display: grid;
-    gap: 1rem;
     width: 100%;
+
+
+
 
     .input-group {
         display: grid;
+        margin-bottom: 1rem;
     }
 
+    a {
+        color: blue;
+    }
 
     label {
         margin-bottom: 3px;
@@ -16,15 +22,16 @@ form {
     input {
         padding: 1rem;
         border-radius: 8px !important;
-        border: 1px solid $gray-700;
+        border: 1px solid $gray-400;
     }
 
     .checkbox-group {
-        margin: 1rem 0;
+        margin-bottom: 1rem;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 0.6rem;
+
 
         label {
             margin: 0;

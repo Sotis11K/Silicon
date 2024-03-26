@@ -356,11 +356,14 @@ a:hover {
 
 form {
   display: grid;
-  gap: 1rem;
   width: 100%;
 }
 form .input-group {
   display: grid;
+  margin-bottom: 1rem;
+}
+form a {
+  color: blue;
 }
 form label {
   margin-bottom: 3px;
@@ -369,10 +372,10 @@ form label {
 form input {
   padding: 1rem;
   border-radius: 8px !important;
-  border: 1px solid #565973;
+  border: 1px solid #D4D7E5;
 }
 form .checkbox-group {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -570,4 +573,51 @@ footer .container .hide-social-media {
 }
 #signup .container .btn-theme-s {
   border: none;
+}
+@media (min-width: 992px) {
+  #signup .container {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  #signup .container {
+    width: 40%;
+  }
+}
+#signup .container form {
+  padding: 1rem;
+}
+#signup .container form .content {
+  display: grid;
+  gap: 0 2rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "firstname" "lastname" "email" "password" "confirm" "terms" "button";
+}
+@media (min-width: 768px) {
+  #signup .container form .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "button button";
+  }
+}
+#signup .container form .content #form-firstname {
+  grid-area: firstname;
+}
+#signup .container form .content #form-lastname {
+  grid-area: lastname;
+}
+#signup .container form .content #form-email {
+  grid-area: email;
+}
+#signup .container form .content #form-password {
+  grid-area: password;
+}
+#signup .container form .content #form-confirm {
+  grid-area: confirm;
+}
+#signup .container form .content #form-terms {
+  grid-area: terms;
+  padding: 1rem 0;
+}
+#signup .container form .content #form-button {
+  grid-area: button;
 }

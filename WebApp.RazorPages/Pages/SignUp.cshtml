@@ -9,37 +9,37 @@
 
         <form method="post">
             <h1>Create Account</h1>
-            <p>Already have an account?<a asp-page="/signin">Sign in here</a></p>
+            <p>Already have an account?<a asp-page="/signin"> Sign in here</a></p>
 
             <div class="content">
-                <div class="input-group">
+                <div id="form-firstname" class="input-group">
                     <label asp-for="@Model.Form.FirstName"></label>
                     <input asp-for="@Model.Form.FirstName" placeholder="Enter your first name">
                 </div>
 
-                <div class="input-group">
+                <div id="form-lastname" class="input-group">
                     <label asp-for="@Model.Form.LastName"></label>
                     <input asp-for="@Model.Form.LastName" placeholder="Enter your last name">
                 </div>
 
-                <div class="input-group">
+                <div id="form-email" class="input-group">
                     <label asp-for="@Model.Form.Email"></label>
                     <input asp-for="@Model.Form.Email" type="email" placeholder="Enter your email address">
                 </div>
 
-                <div class="input-group">
+                <div id="form-password" class="input-group">
                     <label asp-for="@Model.Form.Password"></label>
                     <input asp-for="@Model.Form.Password" type="password" placeholder="********">
                 </div>
 
-                <div class="input-group">
+                <div id="form-confirm" class="input-group">
                     <label asp-for="@Model.Form.ConfirmPassword"></label>
                     <input asp-for="@Model.Form.ConfirmPassword" type="password" placeholder="********">
                 </div>
 
-                <div class="checkbox-group">
+                <div id="form-terms" class="checkbox-group">
                     <input asp-for="@Model.Form.Terms">
-                    <label asp-for="@Model.Form.Terms"></label>
+                    <label asp-for="@Model.Form.Terms">I agree to the <a asp-page="terms">Terms</a> & <a asp-page="/conditions">Conditions</a> </label>
                 </div>
 
             </div>
