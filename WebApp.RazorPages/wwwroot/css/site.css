@@ -354,6 +354,68 @@ a:hover {
   color: #FFFFFF;
 }
 
+form {
+  display: grid;
+  width: 100%;
+}
+form .input-group {
+  display: grid;
+  margin-bottom: 1rem;
+}
+form a {
+  color: blue;
+}
+form label {
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+form input {
+  padding: 1rem;
+  border-radius: 8px !important;
+  border: 1px solid #D4D7E5;
+}
+form input::placeholder {
+  opacity: 0.4;
+}
+form input.input-validation-error {
+  border: 1px solid #EF4444 !important;
+  color: #EF4444;
+}
+form input.input-validation-error::placeholder {
+  color: #EF4444;
+}
+form span.field-validation-errror {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px !important;
+  color: #EF4444;
+}
+form .checkbox-group {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+form .checkbox-group span {
+  color: #EF4444;
+  position: relative;
+}
+form .checkbox-group label {
+  margin: 0;
+  font-weight: 400;
+}
+form .checkbox-group input[type=checkbox] {
+  height: 1rem;
+  width: 1rem;
+  border: 1px solid red;
+}
+
 header {
   padding: 15px 0;
 }
@@ -524,4 +586,64 @@ footer .container .social-media {
 }
 footer .container .hide-social-media {
   display: none;
+}
+
+#signup {
+  height: 100%;
+}
+#signup .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#signup .container .btn-theme-s {
+  border: none;
+}
+@media (min-width: 992px) {
+  #signup .container {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  #signup .container {
+    width: 40%;
+  }
+}
+#signup .container form {
+  padding: 1rem;
+}
+#signup .container form .content {
+  display: grid;
+  gap: 0 2rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "firstname" "lastname" "email" "password" "confirm" "terms" "button";
+}
+@media (min-width: 768px) {
+  #signup .container form .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "button button";
+  }
+}
+#signup .container form .content #form-firstname {
+  grid-area: firstname;
+}
+#signup .container form .content #form-lastname {
+  grid-area: lastname;
+}
+#signup .container form .content #form-email {
+  grid-area: email;
+}
+#signup .container form .content #form-password {
+  grid-area: password;
+}
+#signup .container form .content #form-confirm {
+  grid-area: confirm;
+}
+#signup .container form .content #form-terms {
+  grid-area: terms;
+  padding: 1rem 0;
+}
+#signup .container form .content #form-button {
+  grid-area: button;
 }
