@@ -6,47 +6,43 @@
 
 <section id="signup">
     <div class="container">
-
-        <form method="post">
+        <form method="post" novalidate>
             <h1>Create Account</h1>
             <p>Already have an account?<a asp-page="/signin"> Sign in here</a></p>
-
             <div class="content">
                 <div id="form-firstname" class="input-group">
                     <label asp-for="@Model.Form.FirstName"></label>
-                    <input asp-for="@Model.Form.FirstName" placeholder="Enter your first name">
+                    <span asp-validation-for="@Model.Form.FirstName"></span>
+                    <input asp-for="@Model.Form.FirstName" >
                 </div>
-
                 <div id="form-lastname" class="input-group">
                     <label asp-for="@Model.Form.LastName"></label>
-                    <input asp-for="@Model.Form.LastName" placeholder="Enter your last name">
+                    <span asp-validation-for="@Model.Form.LastName"></span>
+                    <input asp-for="@Model.Form.LastName">
                 </div>
-
                 <div id="form-email" class="input-group">
                     <label asp-for="@Model.Form.Email"></label>
-                    <input asp-for="@Model.Form.Email" type="email" placeholder="Enter your email address">
+                    <span asp-validation-for="@Model.Form.Email"></span>
+                    <input asp-for="@Model.Form.Email">
                 </div>
-
                 <div id="form-password" class="input-group">
                     <label asp-for="@Model.Form.Password"></label>
-                    <input asp-for="@Model.Form.Password" type="password" placeholder="********">
+                    <span asp-validation-for="@Model.Form.Password"></span>
+                    <input asp-for="@Model.Form.Password">
                 </div>
-
                 <div id="form-confirm" class="input-group">
                     <label asp-for="@Model.Form.ConfirmPassword"></label>
-                    <input asp-for="@Model.Form.ConfirmPassword" type="password" placeholder="********">
+                    <span asp-validation-for="@Model.Form.ConfirmPassword"></span>
+                    <input asp-for="@Model.Form.ConfirmPassword">
                 </div>
-
                 <div id="form-terms" class="checkbox-group">
                     <input asp-for="@Model.Form.Terms">
-                    <label asp-for="@Model.Form.Terms">I agree to the <a asp-page="terms">Terms</a> & <a asp-page="/conditions">Conditions</a> </label>
+                    <label asp-for="@Model.Form.Terms">I agree to the <a asp-page="/terms">Terms</a> & <a asp-page="/conditions">Conditions</a> </label>
+                    <span asp-validation-for="@Model.Form.Terms"></span>
                 </div>
 
+                <button id="form-button" class="btn-theme-s" type="submit">Sign up</button>
             </div>
-
-            <button class="btn-theme-s">Sign up</button>
-
         </form>
-
     </div>
 </section>

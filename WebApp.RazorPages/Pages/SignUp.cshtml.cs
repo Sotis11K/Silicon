@@ -6,16 +6,23 @@ namespace WebApp.RazorPages.Pages;
 
 public class SignUpModel : PageModel
 {
-    public SignUpFormModel Form { get; set; } = null!;
+    [BindProperty]
+    public SignUpFormModel Form { get; set; } = new SignUpFormModel();
 
 
 
     public void OnGet()
     {
-        Form = new SignUpFormModel();
     }
 
-    public void OnPost()
+    public IActionResult OnPost()
     {
+        if (!ModelState.IsValid)
+        {
+            return Page();
+        }
+
+        return RedirectToPage("/index");
+
     }
 }
