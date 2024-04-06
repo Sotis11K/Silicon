@@ -1,4 +1,5 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+﻿@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 html, body {
   line-height: 160%;
   font-weight: 400;
@@ -372,7 +373,7 @@ form label {
 form input {
   padding: 1rem;
   border-radius: 8px !important;
-  border: 1px solid #D4D7E5;
+  border: 1px solid #33354D;
 }
 form input::placeholder {
   opacity: 0.4;
@@ -384,16 +385,25 @@ form input.input-validation-error {
 form input.input-validation-error::placeholder {
   color: #EF4444;
 }
-form span.field-validation-errror {
-  position: absolute;
-  top: 0;
-  right: 0;
+form span {
+  position: relative;
+}
+form span.field-validation-error {
   line-height: 160%;
   font-weight: 400;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 14px !important;
   color: #EF4444;
+}
+form span.field-validation-error::after {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  z-index: 10;
+  font-size: 2em;
+  display: block;
+  content: "⮿";
 }
 form .checkbox-group {
   margin-bottom: 1rem;
@@ -405,6 +415,9 @@ form .checkbox-group {
 form .checkbox-group span {
   color: #EF4444;
   position: relative;
+}
+form .checkbox-group span::after {
+  content: "";
 }
 form .checkbox-group label {
   margin: 0;
