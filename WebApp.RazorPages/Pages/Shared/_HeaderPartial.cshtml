@@ -2,11 +2,12 @@
 
 @{
     bool isRoot = Context.Request.Path.Value!.Equals("/");
+
 }
 
 <header>
     <div class="container">
-        <a asp-page="/index"><img src="images/silicon_logo1_light.svg" alt="Silicon logo"></a>
+        <a asp-page="/index"><img src="../images/silicon_logo1_light.svg" alt="Silicon logo"></a>
 
         <div class="menu">
             <nav>
@@ -26,8 +27,10 @@
         </div>
 
         <div class="account-buttons">
-            <partial name="~/Pages/Components/_Button.cshtml" model='new ButtonViewModel{ClassName = "btn-gray", Link = "/signin", Icon = "fa-solid fa-right-to-bracket", Text = "Sign In"}' />
-            <partial name="~/Pages/Components/_Button.cshtml" model='new ButtonViewModel{ClassName = "btn-theme", Link = "/signup", Icon = "fa-regular fa-user", Text = "Sign Up"}' />
+            <partial name="~/Pages/Components/_Button.cshtml" model='new ButtonViewModel{ClassName = "btn-gray", Link = "../Auth/signin", Icon = "fa-solid fa-right-to-bracket", Text = "Sign In"}' />
+            <partial name="~/Pages/Components/_Button.cshtml" model='new ButtonViewModel{ClassName = "btn-theme", Link = "../Auth/signup", Icon = "fa-regular fa-user", Text = "Sign Up"}' />
+            <partial name="~/Pages/Components/_Button.cshtml" model='new ButtonViewModel{ClassName = "btn-gray", Link = "../Account/details", Icon = "fa-solid fa-right-to-bracket", Text = "TEMP"}' />
+
         </div>
     </div>
 </header>
