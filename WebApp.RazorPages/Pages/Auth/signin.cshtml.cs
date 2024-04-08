@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebApp.RazorPages.Models;
 
-namespace WebApp.RazorPages.Pages
+namespace WebApp.RazorPages.Pages.Auth
 {
     public class signinModel : PageModel
     {

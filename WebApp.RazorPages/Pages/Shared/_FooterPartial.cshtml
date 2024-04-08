@@ -1,7 +1,7 @@
 ﻿@{
     bool hideSocial = false;
 
-    if(Context.Request.Path.Value!.Equals("/signin") || Context.Request.Path.Value!.Equals("/signup"))
+    if(Context.Request.Path.Value!.Equals("/Auth/signin") || Context.Request.Path.Value!.Equals("/Auth/signup"))
     {
         hideSocial = true;
     }
