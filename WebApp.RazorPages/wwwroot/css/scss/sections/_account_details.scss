@@ -25,16 +25,28 @@
         nav {
             margin-top: 50px;
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
 
             a {
-                margin: 10px 0;
                 text-align: left;
                 justify-content: flex-start;
+                font-weight: 700;
             }
 
             .btn-theme-s {
                 text-align: left;
                 justify-content: flex-start;
+            }
+
+            .btn-transparent {
+                text-align: left;
+                @include button;
+                justify-content: flex-start;
+                padding-top: 10px;
+                padding-bottom: 13px;
+                color: $black;
             }
         }
     }
@@ -135,7 +147,6 @@
                         margin: 20px 0;
                         display: flex;
                         gap: 20px;
-                        
                     }
                 }
             }

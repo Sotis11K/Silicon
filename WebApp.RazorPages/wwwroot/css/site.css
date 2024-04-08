@@ -773,15 +773,33 @@ footer .container .hide-social-media {
 #account-details aside nav {
   margin-top: 50px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 #account-details aside nav a {
-  margin: 10px 0;
   text-align: left;
   justify-content: flex-start;
+  font-weight: 700;
 }
 #account-details aside nav .btn-theme-s {
   text-align: left;
   justify-content: flex-start;
+}
+#account-details aside nav .btn-transparent {
+  text-align: left;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-bottom: 13px;
+  color: #000000;
 }
 #account-details .details {
   margin-top: 50px;

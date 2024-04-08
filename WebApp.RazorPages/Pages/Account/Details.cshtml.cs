@@ -20,7 +20,12 @@ namespace WebApp.RazorPages.Pages.Account
 
         public AccountDetailsAddressInfoModel AddressInfo { get; set; } = new AccountDetailsAddressInfoModel();
 
-        public IActionResult OnPost()
+        public IActionResult OnPostBasicInfo()
+        {
+            return RedirectToPage("/account/details");
+        }
+
+        public IActionResult OnPostAddress()
         {
             return RedirectToPage("/account/details");
         }
